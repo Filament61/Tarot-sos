@@ -18,12 +18,20 @@ class Partie: NSManagedObject {
         return Parties
     }
     
-    static func save(scoreJeu jeuComplet: JeuComplet, idPartie: Int, hD: Date) {
+    static func save(_ partie: Partie, participants: [JoueurCell], idPartie: Int, hD: Date) {
         
         let partie = Partie(context: AppDelegate.viewContext)
         
         partie.idPartie = Int32(idPartie)
         partie.horodate = hD
+        
+        for item in participants {
+            let participant = Participant(context: AppDelegate.viewContext)
+            participant.idJoueur = Int16(item.idJoueurLabel.text!)!
+            participant.ordre = Int16(item.idx)
+            partie.addToParticipants(participant)
+        }
+        
         
         
 //        jeuResultat.contrat = Int16(jeuComplet.contrat!)

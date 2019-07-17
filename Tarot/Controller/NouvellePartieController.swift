@@ -24,6 +24,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     var cells =  [JoueurCell]()
     var preneur = JoueurCell()
     
+    var partie = Partie()
     
     let idPartie = NSManagedObject.nextAvailble("idPartie", forEntityName: "Partie", inContext: AppDelegate.viewContext)
     let now = Date()
@@ -220,6 +221,11 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
         nbJoueursImage.image = UIImage(named: "icons8-cerclé-0-1")
     }
 
+    @IBAction func nouvellePartieAction(_ sender: Any) {
+//        var participants = partie.mutableSetValue(forKey: #keyPath(Partie.participants))
+
+        Partie.save(partie, participants: cellTab, idPartie: idPartie, hD: now)
+    }
     
 }
 
