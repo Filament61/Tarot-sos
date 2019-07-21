@@ -26,7 +26,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     
     var partie = Partie()
     
-    let idPartie = NSManagedObject.nextAvailble("idPartie", forEntityName: "Partie", inContext: AppDelegate.viewContext)
+    let idPartie = NSManagedObject.nextAvailble("idPartie", forEntityName: "Partie")
     let now = Date()
 
     
@@ -225,8 +225,24 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
 //        var participants = partie.mutableSetValue(forKey: #keyPath(Partie.participants))
 
         Partie.save(partie, participants: cellTab, idPartie: idPartie, hD: now)
+        
+        fetchParties()
     }
     
+    
+    func fetchParties() {
+        let requete: NSFetchRequest<Partie> = Partie.fetchRequest()
+        let tri = NSSortDescriptor(key: "idPartie", ascending: true)
+        requete.sortDescriptors = [tri]
+        do {
+            let parties = try contexte.fetch(requete)
+//            tableView.reloadData()
+            let toto = parties.count
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
 }
 
 
