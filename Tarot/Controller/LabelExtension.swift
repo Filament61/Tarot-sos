@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension AjoutPersonneController {
-
-    func miseEnPlaceLabel() {
-        idJoueurLabel.text = String(idJoueur)
-        
-        let format = DateFormatter()
-        format.dateFormat = "dd/MM/YYYY HH:mm"
-        horodateLabel.text = format.string(from: now)
-    }
-}
+//extension AjoutPersonneController {
+//
+//    func miseEnPlaceLabel() {
+//        idJoueurLabel.text = String(idJoueur)
+//        
+//        let format = DateFormatter()
+//        format.dateFormat = "dd/MM/YYYY HH:mm"
+//        horodateLabel.text = format.string(from: now)
+//    }
+//}
 

@@ -25,15 +25,6 @@ class SliderPoints: UISlider {
     func changerValeur(_ valeur: Float) {
         super.setValue(valeur, animated: true)
     }
-        //    override func setValue(_ value: Float, animated: Bool) {
-//        if value > 45 {
-//            self.minimumTrackTintColor = UIColor.red
-//            self.maximumTrackTintColor = UIColor.green
-//        } else {
-//            self.minimumTrackTintColor = UIColor.green
-//            self.maximumTrackTintColor = UIColor.red
-//        }
-//    }
 
     func miseEnPlace() {
         self.minimumValue = 0.0

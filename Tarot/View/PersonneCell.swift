@@ -10,8 +10,6 @@ import UIKit
 
 class PersonneCell: UITableViewCell {
     
-
-    
     @IBOutlet weak var idxLabel: UILabel!
     @IBOutlet weak var idxImage: ImageArrondie!
     @IBOutlet weak var idJoueurLabel: UILabel!
@@ -29,7 +27,8 @@ class PersonneCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    var joueur: Personne!
+    var personne: Personne!
+    
     var idx: Int = -1 {
         didSet {
             idxLabel.text = String(self.idx)
@@ -53,18 +52,18 @@ class PersonneCell: UITableViewCell {
     
     func miseEnPlace(personne: Personne) {
         
-        self.joueur = personne
+        self.personne = personne
         
-        idJoueurLabel.text = String(self.joueur.idJoueur)
-        photoDeProfil.image = self.joueur.photo as? UIImage
+        idJoueurLabel.text = String(self.personne.idJoueur)
+        photoDeProfil.image = self.personne.photo as? UIImage
 
-        if let leSurnom = self.joueur.surnom {
+        if let leSurnom = self.personne.surnom {
             surnom.text = leSurnom
         }
-        if let leNom = self.joueur.nom {
+        if let leNom = self.personne.nom {
             nom.text = leNom
         }
-        if let lePrenom = self.joueur.prenom {
+        if let lePrenom = self.personne.prenom {
             prenomLabel.text = lePrenom
         }
     }

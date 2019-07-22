@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ParticipantsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ParticipantController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
