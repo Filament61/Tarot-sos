@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AjoutJoueurController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AjoutPersonneController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     func miseEnPlaceImagePicker() {

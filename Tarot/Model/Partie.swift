@@ -18,7 +18,7 @@ class Partie: NSManagedObject {
         return Parties
     }
     
-    static func save(_ partie: Partie, participants: [JoueurCell], idPartie: Int, hD: Date) {
+    static func save(_ partie: Partie, participants: [PersonneCell], idPartie: Int, hD: Date) {
         
         let partie = Partie(context: AppDelegate.viewContext)
         

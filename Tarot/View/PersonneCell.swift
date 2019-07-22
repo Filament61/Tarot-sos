@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JoueurCell: UITableViewCell {
+class PersonneCell: UITableViewCell {
     
 
     
@@ -29,7 +29,7 @@ class JoueurCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    var joueur: Joueur!
+    var joueur: Personne!
     var idx: Int = -1 {
         didSet {
             idxLabel.text = String(self.idx)
@@ -51,9 +51,9 @@ class JoueurCell: UITableViewCell {
         return
     }
     
-    func miseEnPlace(joueur: Joueur) {
+    func miseEnPlace(personne: Personne) {
         
-        self.joueur = joueur
+        self.joueur = personne
         
         idJoueurLabel.text = String(self.joueur.idJoueur)
         photoDeProfil.image = self.joueur.photo as? UIImage

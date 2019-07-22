@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AjoutJoueurController: UIViewController {
+class AjoutPersonneController: UIViewController {
 
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var contrainteDuBas: NSLayoutConstraint!
@@ -26,7 +26,7 @@ class AjoutJoueurController: UIViewController {
     
     var imagePicker: UIImagePickerController?
     
-    let idJoueur = NSManagedObject.nextAvailble("idJoueur", forEntityName: "Joueur")
+    let idJoueur = NSManagedObject.nextAvailble("idJoueur", forEntityName: "Personne")
     let now = Date()
 
     override func viewDidLoad() {
@@ -47,24 +47,24 @@ class AjoutJoueurController: UIViewController {
     
     
     
-    @IBAction func ajouterJoueurAction(_ sender: UIButton) {
+    @IBAction func ajouterPersonneAction(_ sender: UIButton) {
         view.endEditing(true)
         
-        let nouveauJoueur = Joueur(context: contexte)
+        let nouvellePersonne = Personne(context: contexte)
         
         if prenomTextField.text != nil {
-            nouveauJoueur.prenom = prenomTextField.text!
+            nouvellePersonne.prenom = prenomTextField.text!
         }
         if nomTextField.text != nil {
-            nouveauJoueur.nom = nomTextField.text!
+            nouvellePersonne.nom = nomTextField.text!
         }
         if surnomTextField.text != nil {
-            nouveauJoueur.surnom = surnomTextField.text!
+            nouvellePersonne.surnom = surnomTextField.text!
         }
-        nouveauJoueur.photo = imageDeProfil.image
+        nouvellePersonne.photo = imageDeProfil.image
         
-        nouveauJoueur.idJoueur = Int16(idJoueur)
-        nouveauJoueur.horodate = now
+        nouvellePersonne.idJoueur = Int16(idJoueur)
+        nouvellePersonne.horodate = now
         
         appDelegate.saveContext()
         navigationController?.popViewController(animated: true)

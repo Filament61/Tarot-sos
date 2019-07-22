@@ -50,7 +50,7 @@ class JeuResultatController: UIViewController {
     let idJeu = NSManagedObject.nextAvailble("idJeu", forEntityName: "JeuResultat")
     let now = Date()
     var preneur = Int()
-    var cellTab = [JoueurCell]()
+    var cellTab = [PersonneCell]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

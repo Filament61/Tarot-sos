@@ -8,10 +8,10 @@
 
 import CoreData
 
-class Joueur: NSManagedObject {
+class Personne: NSManagedObject {
     
-    static func all(TrierPar tri: String = "surnom") -> [Joueur] {
-        let request: NSFetchRequest<Joueur> = Joueur.fetchRequest()
+    static func all(TrierPar tri: String = "surnom") -> [Personne] {
+        let request: NSFetchRequest<Personne> = Personne.fetchRequest()
         let tri = NSSortDescriptor(key: tri, ascending: true)
         request.sortDescriptors = [tri]
         
@@ -19,8 +19,8 @@ class Joueur: NSManagedObject {
         return joueurs
     }
     
-    static func joueurPartie(idJoueurs: [Int]) -> [Joueur] {
-        let request: NSFetchRequest<Joueur> = Joueur.fetchRequest()
+    static func joueurPartie(idJoueurs: [Int]) -> [Personne] {
+        let request: NSFetchRequest<Personne> = Personne.fetchRequest()
         // Définition de tri de la requête
         let tri = NSSortDescriptor(key: "nom", ascending: true)
         request.sortDescriptors = [tri]

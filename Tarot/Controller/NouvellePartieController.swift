@@ -17,12 +17,12 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var listeJoueurs: UILabel!
     @IBOutlet weak var nbJoueursImage: UIImageView!
     
-    var cellId = "JoueurCell"
+    var cellId = "PersonneCell"
     
-    var joueurs = [Joueur]()
-    var cellTab = [JoueurCell]()
-    var cells =  [JoueurCell]()
-    var preneur = JoueurCell()
+    var joueurs = [Personne]()
+    var cellTab = [PersonneCell]()
+    var cells =  [PersonneCell]()
+    var preneur = PersonneCell()
     
     var partie = Partie()
     
@@ -56,8 +56,8 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let joueurDeLaCell = joueurs[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? JoueurCell {
-            cell.miseEnPlace(joueur: joueurDeLaCell)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? PersonneCell {
+            cell.miseEnPlace(personne: joueurDeLaCell)
             return cell
         }
         return UITableViewCell()
@@ -86,7 +86,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     
     
     func fetchJoueurs() {
-        let requete: NSFetchRequest<Joueur> = Joueur.fetchRequest()
+        let requete: NSFetchRequest<Personne> = Personne.fetchRequest()
         let tri = NSSortDescriptor(key: "nom", ascending: true)
         requete.sortDescriptors = [tri]
         do {
@@ -103,7 +103,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        preneur = tableView.cellForRow(at: indexPath) as! JoueurCell
+        preneur = tableView.cellForRow(at: indexPath) as! PersonneCell
         if preneur.idx > 0 {
             self.performSegue(withIdentifier: "Segue", sender: self)
         }
@@ -148,7 +148,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         //        return UISwipeActionsConfiguration()
         
-        guard let cell = tableView.cellForRow(at: indexPath) as? JoueurCell else { return nil }
+        guard let cell = tableView.cellForRow(at: indexPath) as? PersonneCell else { return nil }
         
         let choixAction = UIContextualAction(style: .normal, title:  "", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             
@@ -197,7 +197,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     
     
     @IBAction func Tri(_ sender: UIBarButtonItem) {
-                   self.joueurs.sort(by: { (first: Joueur, second: Joueur) -> Bool in
+                   self.joueurs.sort(by: { (first: Personne, second: Personne) -> Bool in
                         return UIContentSizeCategory(rawValue: first.surnom!) > UIContentSizeCategory(rawValue: second.surnom!)
                     })
 }

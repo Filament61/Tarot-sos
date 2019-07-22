@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AjoutJoueurController: UITextFieldDelegate {
+extension AjoutPersonneController: UITextFieldDelegate {
     
     func miseEnPlaceTextField() {
         prenomTextField.delegate = self

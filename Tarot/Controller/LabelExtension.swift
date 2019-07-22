@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AjoutJoueurController {
+extension AjoutPersonneController {
 
     func miseEnPlaceLabel() {
         idJoueurLabel.text = String(idJoueur)

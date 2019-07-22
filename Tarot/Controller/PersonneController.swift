@@ -13,9 +13,9 @@ class JoueursController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView: UITableView!
     
-    var cellId = "JoueurCell"
+    var cellId = "PersonneCell"
     
-    var joueurs = [Joueur]()
+    var joueurs = [Personne]()
     
 
     override func viewDidLoad() {
@@ -44,8 +44,8 @@ class JoueursController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let joueurDeLaCell = joueurs[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? JoueurCell {
-            cell.miseEnPlace(joueur: joueurDeLaCell)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? PersonneCell {
+            cell.miseEnPlace(personne: joueurDeLaCell)
             return cell
         }
         return UITableViewCell()        
@@ -55,7 +55,7 @@ class JoueursController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            if let _ = tableView.cellForRow(at: indexPath) as? JoueurCell {
+            if let _ = tableView.cellForRow(at: indexPath) as? PersonneCell {
             let personneASupprimmer = joueurs[indexPath.row]
                 contexte.delete(personneASupprimmer)
                 do {
@@ -78,7 +78,7 @@ class JoueursController: UIViewController, UITableViewDelegate, UITableViewDataS
 //        requete.sortDescriptors = [tri]
         
 //        joueurs = Joueur.all()
-        joueurs = Joueur.joueurPartie(idJoueurs: [2,1,3,5,7])
+        joueurs = Personne.joueurPartie(idJoueurs: [2,1,3,5,7])
         tableView.reloadData()
         
 //        do {
