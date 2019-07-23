@@ -14,7 +14,7 @@ class ParticipantCell: UITableViewCell {
     @IBOutlet weak var ordreLabel: UILabel!
     @IBOutlet weak var idJoueurLabel: UILabel!
     
-     var participant: Participant!
+    var participant: Joueur!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class ParticipantCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func miseEnPlace(participant: Participant) {
+    func miseEnPlace(participant: Joueur) {
         
         self.participant = participant
         

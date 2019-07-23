@@ -16,3 +16,4 @@ let contexte = appDelegate.persistentContainer.viewContext
 
 
 public var joueursTab = [("Serge"), ("Phillipe"), ("Alain"), ("Marc"), ("Robert"), "Loulou"]
+public var dicoJoueurs = AppDelegate.dicoJoueurs

@@ -26,7 +26,7 @@ class Partie: NSManagedObject {
         partie.horodate = hD
         
         for item in participants {
-            let participant = Participant(context: AppDelegate.viewContext)
+            let participant = Joueur(context: AppDelegate.viewContext)
             participant.idJoueur = Int16(item.idJoueurLabel.text!)!
             participant.ordre = Int16(item.idx)
             partie.addToParticipants(participant)

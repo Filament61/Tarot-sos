@@ -22,7 +22,7 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     var joueurs = [Personne]()
     var cellTab = [PersonneCell]()
     var cells =  [PersonneCell]()
-    var preneur = PersonneCell()
+//    var preneur = PersonneCell()
     
     var partie = Partie()
     
@@ -103,47 +103,47 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        preneur = tableView.cellForRow(at: indexPath) as! PersonneCell
-        if preneur.idx > 0 {
-            self.performSegue(withIdentifier: "Segue", sender: self)
-        }
+//        preneur = tableView.cellForRow(at: indexPath) as! PersonneCell
+//        if preneur.idx > 0 {
+//            self.performSegue(withIdentifier: "Segue", sender: self)
+//        }
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let petite = UIContextualAction(style: .normal, title:  "Petite", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            //self.isEditing = false
-//                        let cell = tableView.cellForRow(at: indexPath) as! JoueurCell
-//            self.preneur = cell
-            self.performSegue(withIdentifier: "Segue", sender: self)
-            print("more button tapped")
-            success(false)
-        })
-        petite.backgroundColor = UIColor.lightGray
-        
-        let garde = UIContextualAction(style: .normal, title:  "Garde", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            //self.isEditing = false
-            print("favorite button tapped")
-            success(false)
-        })
-        garde.backgroundColor = UIColor.orange
-        
-        let sans = UIContextualAction(style: .normal, title:  "Sans", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            //self.isEditing = false
-            print("share button tapped")
-            success(false)
-        })
-        sans.backgroundColor = UIColor.blue
-            let contre = UIContextualAction(style: .normal, title:  "Contre", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-                //self.isEditing = false
-                print("share button tapped")
-                success(false)
-        })
-        contre.backgroundColor = UIColor.green
-        
-        
-        return UISwipeActionsConfiguration(actions: [contre, sans, garde, petite,])
-    }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//        let petite = UIContextualAction(style: .normal, title:  "Petite", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+//            //self.isEditing = false
+////                        let cell = tableView.cellForRow(at: indexPath) as! JoueurCell
+////            self.preneur = cell
+//            self.performSegue(withIdentifier: "Segue", sender: self)
+//            print("more button tapped")
+//            success(false)
+//        })
+//        petite.backgroundColor = UIColor.lightGray
+//
+//        let garde = UIContextualAction(style: .normal, title:  "Garde", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+//            //self.isEditing = false
+//            print("favorite button tapped")
+//            success(false)
+//        })
+//        garde.backgroundColor = UIColor.orange
+//
+//        let sans = UIContextualAction(style: .normal, title:  "Sans", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+//            //self.isEditing = false
+//            print("share button tapped")
+//            success(false)
+//        })
+//        sans.backgroundColor = UIColor.blue
+//            let contre = UIContextualAction(style: .normal, title:  "Contre", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+//                //self.isEditing = false
+//                print("share button tapped")
+//                success(false)
+//        })
+//        contre.backgroundColor = UIColor.green
+//
+//
+//        return UISwipeActionsConfiguration(actions: [contre, sans, garde, petite,])
+//    }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         //        return UISwipeActionsConfiguration()
@@ -197,17 +197,21 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     
     
     @IBAction func Tri(_ sender: UIBarButtonItem) {
-                   self.joueurs.sort(by: { (first: Personne, second: Personne) -> Bool in
-                        return UIContentSizeCategory(rawValue: first.surnom!) > UIContentSizeCategory(rawValue: second.surnom!)
-                    })
-}
+        self.joueurs.sort(by: { (first: Personne, second: Personne) -> Bool in
+            return UIContentSizeCategory(rawValue: first.surnom!) > UIContentSizeCategory(rawValue: second.surnom!)
+        })
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        for item in cellTab {
+            dicoJoueurs[Int(item.idJoueurLabel.text!)!] = item.surnom.text
+        }
+        
         if segue.identifier == "Segue" {
 //            let qui = self.preneur.idx
-            let JeuResultatController = segue.destination as! JeuResultatController
-            JeuResultatController.preneur = preneur.idx - 1
-            JeuResultatController.cellTab = cellTab
+            let PartieController = segue.destination as! PartieController
+//            PartieController.preneur = preneur.idx - 1
+            PartieController.cellTab = cellTab
         }
     }
     

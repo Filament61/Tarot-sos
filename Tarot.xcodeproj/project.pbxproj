@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950829B522E62C6D0061B1DC /* JoueurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950829B422E62C6D0061B1DC /* JoueurCell.swift */; };
+		950829B722E634E50061B1DC /* PartieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950829B622E634E50061B1DC /* PartieController.swift */; };
 		9521616022BABF330054F63E /* AjoutPersonneControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521615F22BABF330054F63E /* AjoutPersonneControllerExtension.swift */; };
 		9521616422BACB290054F63E /* AjoutPersonneControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521616322BACB290054F63E /* AjoutPersonneControler.swift */; };
 		9521616622BC1B620054F63E /* PersonneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521616522BC1B620054F63E /* PersonneCell.swift */; };
@@ -22,7 +24,7 @@
 		95517DFE22B7BA1F00ECD1FC /* Structure comptage jeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95517DFD22B7BA1F00ECD1FC /* Structure comptage jeu.swift */; };
 		9558CB9D22B95ABF00C2C3B5 /* PersonneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9558CB9C22B95ABF00C2C3B5 /* PersonneController.swift */; };
 		955C129322D9020900DAC5F0 /* Partie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129222D9020900DAC5F0 /* Partie.swift */; };
-		955C129522D902BE00DAC5F0 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129422D902BE00DAC5F0 /* Participant.swift */; };
+		955C129522D902BE00DAC5F0 /* Joueur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129422D902BE00DAC5F0 /* Joueur.swift */; };
 		955C129722D9034B00DAC5F0 /* JeuJoueur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129622D9034B00DAC5F0 /* JeuJoueur.swift */; };
 		955C129B22DF989A00DAC5F0 /* NSSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129A22DF989A00DAC5F0 /* NSSetExtension.swift */; };
 		955C129D22DFB08500DAC5F0 /* ParticipantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C129C22DFB08500DAC5F0 /* ParticipantController.swift */; };
@@ -38,7 +40,7 @@
 		95A5DB5B22B2B5EF007F3729 /* ImageArrondie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5DB5A22B2B5EF007F3729 /* ImageArrondie.swift */; };
 		95A5DB5D22B2B66C007F3729 /* BoutonArrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5DB5C22B2B66C007F3729 /* BoutonArrondi.swift */; };
 		95BD3CA222B2F71300A2C183 /* JeuResultatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA122B2F71300A2C183 /* JeuResultatController.swift */; };
-		95BD3CA422B3F27000A2C183 /* PickerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA322B3F27000A2C183 /* PickerViewExtension.swift */; };
+		95BD3CA422B3F27000A2C183 /* JeuResultatControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA322B3F27000A2C183 /* JeuResultatControllerExtension.swift */; };
 		95BD3CA622B407B700A2C183 /* DonneesTarot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA522B407B700A2C183 /* DonneesTarot.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		950829B422E62C6D0061B1DC /* JoueurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoueurCell.swift; sourceTree = "<group>"; };
+		950829B622E634E50061B1DC /* PartieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieController.swift; sourceTree = "<group>"; };
 		9521615F22BABF330054F63E /* AjoutPersonneControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutPersonneControllerExtension.swift; sourceTree = "<group>"; };
 		9521616322BACB290054F63E /* AjoutPersonneControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutPersonneControler.swift; sourceTree = "<group>"; };
 		9521616522BC1B620054F63E /* PersonneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneCell.swift; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 		95517DFD22B7BA1F00ECD1FC /* Structure comptage jeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structure comptage jeu.swift"; sourceTree = "<group>"; };
 		9558CB9C22B95ABF00C2C3B5 /* PersonneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		955C129222D9020900DAC5F0 /* Partie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partie.swift; sourceTree = "<group>"; };
-		955C129422D902BE00DAC5F0 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		955C129422D902BE00DAC5F0 /* Joueur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joueur.swift; sourceTree = "<group>"; };
 		955C129622D9034B00DAC5F0 /* JeuJoueur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuJoueur.swift; sourceTree = "<group>"; };
 		955C129A22DF989A00DAC5F0 /* NSSetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSetExtension.swift; sourceTree = "<group>"; };
 		955C129C22DFB08500DAC5F0 /* ParticipantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantController.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 		95A5DB5A22B2B5EF007F3729 /* ImageArrondie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArrondie.swift; sourceTree = "<group>"; };
 		95A5DB5C22B2B66C007F3729 /* BoutonArrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonArrondi.swift; sourceTree = "<group>"; };
 		95BD3CA122B2F71300A2C183 /* JeuResultatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuResultatController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		95BD3CA322B3F27000A2C183 /* PickerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewExtension.swift; sourceTree = "<group>"; };
+		95BD3CA322B3F27000A2C183 /* JeuResultatControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuResultatControllerExtension.swift; sourceTree = "<group>"; };
 		95BD3CA522B407B700A2C183 /* DonneesTarot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonneesTarot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				95BD3CA122B2F71300A2C183 /* JeuResultatController.swift */,
-				95BD3CA322B3F27000A2C183 /* PickerViewExtension.swift */,
+				95BD3CA322B3F27000A2C183 /* JeuResultatControllerExtension.swift */,
 				95363CE322C3DBB000CBAC02 /* PointsJeuxController.swift */,
 			);
 			name = Jeux;
@@ -220,7 +224,7 @@
 				95363CDF22C29F5A00CBAC02 /* NSManagedObjectExtension.swift */,
 				953536F322CA93D500CFF83C /* Personne.swift */,
 				955C129222D9020900DAC5F0 /* Partie.swift */,
-				955C129422D902BE00DAC5F0 /* Participant.swift */,
+				955C129422D902BE00DAC5F0 /* Joueur.swift */,
 				955C129622D9034B00DAC5F0 /* JeuJoueur.swift */,
 				955C129A22DF989A00DAC5F0 /* NSSetExtension.swift */,
 			);
@@ -236,6 +240,7 @@
 				9521616522BC1B620054F63E /* PersonneCell.swift */,
 				95363CE122C3D96600CBAC02 /* PointsJeuCell.swift */,
 				955C129E22DFB11C00DAC5F0 /* ParticipantCell.swift */,
+				950829B422E62C6D0061B1DC /* JoueurCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				95A5DB3122B2A156007F3729 /* AccueilsssController.swift */,
 				953788A522BE82F000AA9F46 /* NouvellePartieController.swift */,
 				955C129C22DFB08500DAC5F0 /* ParticipantController.swift */,
+				950829B622E634E50061B1DC /* PartieController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,8 +398,10 @@
 				955C129D22DFB08500DAC5F0 /* ParticipantController.swift in Sources */,
 				955C129322D9020900DAC5F0 /* Partie.swift in Sources */,
 				95274CC222CE9A5900BF91C0 /* Shared.swift in Sources */,
+				950829B722E634E50061B1DC /* PartieController.swift in Sources */,
 				95A5DB5B22B2B5EF007F3729 /* ImageArrondie.swift in Sources */,
 				95363CE222C3D96600CBAC02 /* PointsJeuCell.swift in Sources */,
+				950829B522E62C6D0061B1DC /* JoueurCell.swift in Sources */,
 				9521616422BACB290054F63E /* AjoutPersonneControler.swift in Sources */,
 				95A5DB3222B2A156007F3729 /* AccueilsssController.swift in Sources */,
 				95363CDE22C29B6F00CBAC02 /* JeuResultat.swift in Sources */,
@@ -413,8 +421,8 @@
 				955C129B22DF989A00DAC5F0 /* NSSetExtension.swift in Sources */,
 				95363CE422C3DBB000CBAC02 /* PointsJeuxController.swift in Sources */,
 				95517DFA22B441CB00ECD1FC /* ExampleStruct.swift in Sources */,
-				955C129522D902BE00DAC5F0 /* Participant.swift in Sources */,
-				95BD3CA422B3F27000A2C183 /* PickerViewExtension.swift in Sources */,
+				955C129522D902BE00DAC5F0 /* Joueur.swift in Sources */,
+				95BD3CA422B3F27000A2C183 /* JeuResultatControllerExtension.swift in Sources */,
 				9558CB9D22B95ABF00C2C3B5 /* PersonneController.swift in Sources */,
 				9521616622BC1B620054F63E /* PersonneCell.swift in Sources */,
 				95363CE022C29F5A00CBAC02 /* NSManagedObjectExtension.swift in Sources */,

@@ -21,7 +21,7 @@
         <relationship name="joueurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JeuJoueur" inverseName="jeu" inverseEntity="JeuJoueur" syncable="YES"/>
         <relationship name="partie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Partie" inverseName="jeux" inverseEntity="Partie" syncable="YES"/>
     </entity>
-    <entity name="Participant" representedClassName=".Participant" syncable="YES" codeGenerationType="category">
+    <entity name="Joueur" representedClassName=".Joueur" syncable="YES" codeGenerationType="category">
         <attribute name="idJoueur" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ordre" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="points" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -31,7 +31,7 @@
         <attribute name="horodate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="idPartie" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="jeux" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JeuResultat" inverseName="partie" inverseEntity="JeuResultat" syncable="YES"/>
-        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="partie" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Joueur" inverseName="partie" inverseEntity="Joueur" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName=".Personne" syncable="YES" codeGenerationType="category">
         <attribute name="horodate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -45,10 +45,10 @@
         </fetchIndex>
     </entity>
     <elements>
-        <element name="JeuJoueur" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="JeuResultat" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Personne" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Participant" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Partie" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="JeuJoueur" positionX="-232.5859375" positionY="-152.76953125" width="128" height="118"/>
+        <element name="JeuResultat" positionX="-454.59765625" positionY="-242.60546875" width="128" height="223"/>
+        <element name="Personne" positionX="-56.18359375" positionY="-378.6484375" width="128" height="135"/>
+        <element name="Joueur" positionX="162.02734375" positionY="-107.45703125" width="128" height="103"/>
+        <element name="Partie" positionX="-50.91796875" positionY="-107.6171875" width="128" height="103"/>
     </elements>
 </model>

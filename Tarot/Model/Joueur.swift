@@ -8,10 +8,10 @@
 
 import CoreData
 
-class Participant: NSManagedObject {
+class Joueur: NSManagedObject {
     
-    static func all(TrierPar tri: String = "ordre") -> [Participant] {
-        let request: NSFetchRequest<Participant> = Participant.fetchRequest()
+    static func all(TrierPar tri: String = "ordre") -> [Joueur] {
+        let request: NSFetchRequest<Joueur> = Joueur.fetchRequest()
         let tri = NSSortDescriptor(key: tri, ascending: true)
         request.sortDescriptors = [tri]
         

@@ -15,7 +15,7 @@ class ParticipantController: UIViewController, UITableViewDelegate, UITableViewD
     
     var cellId = "ParticipantCell"
 
-    var participants = [Participant]()
+    var participants = [Joueur]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class ParticipantController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func fetchParticipants() {
-        participants = Participant.all()
+        participants = Joueur.all()
         tableView.reloadData()
             }
 

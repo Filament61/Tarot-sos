@@ -37,6 +37,4 @@ extension JeuResultatController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-extension UIPickerView {
-    
-}
+
