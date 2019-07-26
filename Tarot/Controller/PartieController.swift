@@ -47,7 +47,7 @@ class PartieController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70 // ATTENTION SI LA LISTE EST TROP LONGUE --> MAUVAISE GESTION DES INDEX
+        return 54
     }
     
     
@@ -224,7 +224,7 @@ class PartieController: UIViewController, UITableViewDataSource, UITableViewDele
         let tri = NSSortDescriptor(key: "idPartie", ascending: true)
         requete.sortDescriptors = [tri]
         do {
-            let parties = try contexte.fetch(requete)
+            let parties = try appDelegate.persistentContainer.viewContext.fetch(requete)
             //            tableView.reloadData()
             let toto = parties.count
         } catch {

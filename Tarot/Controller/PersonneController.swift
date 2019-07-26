@@ -77,8 +77,8 @@ class JoueursController: UIViewController, UITableViewDelegate, UITableViewDataS
 //        let tri = NSSortDescriptor(key: "nom", ascending: true)
 //        requete.sortDescriptors = [tri]
         
-//        joueurs = Joueur.all()
-        joueurs = Personne.joueurPartie(idJoueurs: [2,1,3,5,7])
+        joueurs = Personne.all()
+//        joueurs = Personne.joueurPartie(idJoueurs: [2,1,3,5,7])
         tableView.reloadData()
         
 //        do {

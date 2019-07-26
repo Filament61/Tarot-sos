@@ -203,6 +203,8 @@ class NouvellePartieController: UIViewController, UITableViewDataSource, UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Mise à jour du dictionnaire des noms des joueurs
+        dicoJoueurs.removeAll()
         for item in cellTab {
             dicoJoueurs[Int(item.idJoueurLabel.text!)!] = item.surnom.text
         }

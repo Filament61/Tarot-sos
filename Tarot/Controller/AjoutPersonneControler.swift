@@ -50,6 +50,9 @@ class AjoutPersonneController: UIViewController {
     @IBAction func ajouterPersonneAction(_ sender: UIButton) {
         view.endEditing(true)
         
+        
+        guard surnomTextField.hasText else { return }
+        
         let nouvellePersonne = Personne(context: contexte)
         
         if prenomTextField.text != nil {

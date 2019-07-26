@@ -29,10 +29,14 @@ class Partie: NSManagedObject {
             let participant = Joueur(context: AppDelegate.viewContext)
             participant.idJoueur = Int16(item.idJoueurLabel.text!)!
             participant.ordre = Int16(item.idx)
+            participant.points = 0.0
+            
             partie.addToParticipants(participant)
         }
         
-        
+//        if let deletable = participants.array as? [Joueur] {
+//            AppDelegate.viewContext.delete(deletable)
+//        }
         
 //        jeuResultat.contrat = Int16(jeuComplet.contrat!)
 //        jeuResultat.nbBout = Int16(jeuComplet.nbBout!)

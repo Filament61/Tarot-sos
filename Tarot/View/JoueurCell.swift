@@ -32,8 +32,10 @@ class JoueurCell: UITableViewCell {
         
         self.joueur = joueur
         
-        surnomLabel.text = String(self.joueur.idJoueur)
-//        ordreImage = String(self.joueur.ordre)
+        surnomLabel.text = dicoJoueurs[Int(self.joueur.idJoueur)]
+        pointsLabel.text = String(self.joueur.points)
+        ordreImage.image = UIImage(named: "icons8-cerclé-" + String(self.joueur.ordre) + "-1")
+        classementImage.image = UIImage(named: "icons8-cerclé-" + String(self.joueur.classement) + "-1")
     }
 
 

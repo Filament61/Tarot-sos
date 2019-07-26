@@ -41,7 +41,7 @@
 		95A5DB5D22B2B66C007F3729 /* BoutonArrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5DB5C22B2B66C007F3729 /* BoutonArrondi.swift */; };
 		95BD3CA222B2F71300A2C183 /* JeuResultatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA122B2F71300A2C183 /* JeuResultatController.swift */; };
 		95BD3CA422B3F27000A2C183 /* JeuResultatControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA322B3F27000A2C183 /* JeuResultatControllerExtension.swift */; };
-		95BD3CA622B407B700A2C183 /* DonneesTarot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA522B407B700A2C183 /* DonneesTarot.swift */; };
+		95BD3CA622B407B700A2C183 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD3CA522B407B700A2C183 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +114,7 @@
 		95A5DB5C22B2B66C007F3729 /* BoutonArrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonArrondi.swift; sourceTree = "<group>"; };
 		95BD3CA122B2F71300A2C183 /* JeuResultatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuResultatController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		95BD3CA322B3F27000A2C183 /* JeuResultatControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuResultatControllerExtension.swift; sourceTree = "<group>"; };
-		95BD3CA522B407B700A2C183 /* DonneesTarot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonneesTarot.swift; sourceTree = "<group>"; };
+		95BD3CA522B407B700A2C183 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				95A5DB3622B2A156007F3729 /* Tarot.xcdatamodeld */,
-				95BD3CA522B407B700A2C183 /* DonneesTarot.swift */,
+				95BD3CA522B407B700A2C183 /* Data.swift */,
 				95517DFD22B7BA1F00ECD1FC /* Structure comptage jeu.swift */,
 				95363CDD22C29B6F00CBAC02 /* JeuResultat.swift */,
 				95363CDF22C29F5A00CBAC02 /* NSManagedObjectExtension.swift */,
@@ -410,7 +410,7 @@
 				95A5DB5922B2A4B1007F3729 /* Constantes.swift in Sources */,
 				95517DFE22B7BA1F00ECD1FC /* Structure comptage jeu.swift in Sources */,
 				953788A622BE82F000AA9F46 /* NouvellePartieController.swift in Sources */,
-				95BD3CA622B407B700A2C183 /* DonneesTarot.swift in Sources */,
+				95BD3CA622B407B700A2C183 /* Data.swift in Sources */,
 				955C129F22DFB11C00DAC5F0 /* ParticipantCell.swift in Sources */,
 				95A5DB3822B2A156007F3729 /* Tarot.xcdatamodeld in Sources */,
 				953536F422CA93D500CFF83C /* Personne.swift in Sources */,
